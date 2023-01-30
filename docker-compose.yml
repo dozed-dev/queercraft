@@ -1,0 +1,7 @@
+services:
+  mc-server:
+    image: eclipse-temurin:17 # java 17
+    ports:
+      - 25566:25565
+    volumes:
+      - ~/server1:/server

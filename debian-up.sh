@@ -7,6 +7,8 @@ packages=(
   neovim git htop screen
   # for adding docker repo
   ca-certificates curl gnupg lsb-release
+  # fuse for mounting
+  fuse
 )
 
 docker_packages=(

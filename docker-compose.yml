@@ -1,7 +1,13 @@
 services:
   mc-server:
-    image: eclipse-temurin:17 # java 17
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    stdin_open: true
     ports:
       - 25566:25565
     volumes:
-      - ~/server1:/server
+      - mc-server:/server
+volumes:
+  mc-server:

@@ -15,3 +15,8 @@ RUN echo "eula=true" > eula.txt
 
 # Run server
 CMD ["java", "-javaagent:authlib-injector.jar=ely.by", "-Dauthlibinjector.mojangNamespace=disabled", "-jar", "server.jar"]
+
+# Container setup
+EXPOSE 25565/tcp
+EXPOSE 25565/udp
+VOLUME /server

@@ -7,7 +7,18 @@ services:
     stdin_open: true
     ports:
       - 25566:25565
+    environment:
+      - DEBUG_COLORS:"true"
+      - TERM:"xterm-256color"
+      - COLORTERM:"truecolor"
     volumes:
-      - mc-server:/server
+      - mc-server:/server-data
+  #backup-endpoint:
+  #  image: rclone/rclone:latest
+  #  #command: serve restic
+  #  volumes:
+  #    - mc-server:/data
+  #    - ~/.config/rclone:/config/rclone
+
 volumes:
   mc-server:
